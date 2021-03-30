@@ -98,12 +98,8 @@
                 if (this.card.date_employment == null || this.card.date_employment === "") {
                     return false
                 }
-                // Дата увольнения
-                if ((this.card.date_of_dismissal == null || this.card.date_of_dismissal === "")) {
-                    return false
-                }
                 // Проверка дат
-                if (!(new Date(this.card.date_of_dismissal) > new Date(this.card.date_employment))) {
+                if (!(new Date(this.card.date_of_dismissal) >= new Date(this.card.date_employment))) {
                     return false
                 }
                 return true
