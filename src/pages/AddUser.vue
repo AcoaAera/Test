@@ -61,7 +61,8 @@
                 this.card.id = allUser.length;
                 allUser.push(this.card)
                 localStorage.allUser = JSON.stringify(allUser)
-                location.href = '/'
+                this.$router.push({ name: 'all'})
+
             },
             checkAllFields() {
                 // Фамилия

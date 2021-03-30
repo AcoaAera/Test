@@ -62,7 +62,7 @@
                     if (allUser[i].id == this.card.id) {
                         allUser[i] = this.card
                         localStorage.allUser = JSON.stringify(allUser)
-                        location.href = "/"
+                        this.$router.push({ name: 'all'})
                     }
                 }
             },

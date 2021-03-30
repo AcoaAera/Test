@@ -95,7 +95,9 @@
                     cellRenderer: "btnCellRenderer",
                     cellRendererParams: {
                         changeTask: function (id) {
-                            location.href = location.href + 'edit/' + id
+                            this.$router.push({ name: 'edit', params: { id: id } })
+
+                            //location.href = location.href + 'edit/' + id
                         },
                         del: function (id) {
                             let x = (JSON.parse(localStorage.allUser))

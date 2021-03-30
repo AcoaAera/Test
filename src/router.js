@@ -7,15 +7,18 @@ export default new VueRouter({
     routes: [
         {
             path: "/",
-            component: AllUser
+            component: AllUser,
+            name: 'all'
         },
         {
             path: "/add",
-            component: AddUser
+            component: AddUser,
+            name: "add"
         },
         {
             path: "/edit/:id",
-            component: EditUser
+            component: EditUser,
+            name: "edit"
         },
     ],
     mode: 'history',
