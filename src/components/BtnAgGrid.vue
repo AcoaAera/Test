@@ -1,15 +1,15 @@
 <template>
     <div>
-        <img
+        <span
                 src="/img/update1.png"
                 class="bg-bee-btn-color"
                 v-on:click="changeTask()"
-        />
-        <img
+        >&#128393;</span>
+        <span
                 src="/img/delete.png"
                 class="bg-bee-btn-color"
                 v-on:click="del()"
-        />
+        >&#128465;</span>
     </div>
 </template>
 
@@ -31,7 +31,13 @@
 
 <style scoped>
     .bg-bee-btn-color {
-        width: 34px;
-        height: 34px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .bg-bee-btn-color:hover {
+        border: 1px solid black;
+        border-radius: 5px;
+        font-size: 25px;
+        cursor: pointer;
     }
 </style>

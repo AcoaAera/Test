@@ -10,7 +10,7 @@ export default new VueRouter({
             component: AllUser
         },
         {
-            path: "/add",
+            path: "/#/add",
             component: AddUser
         },
         {
@@ -19,5 +19,5 @@ export default new VueRouter({
         },
     ],
     //mode: 'history',
-    //base: "/app/"
+    //base: "/test/"
 })

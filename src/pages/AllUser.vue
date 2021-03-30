@@ -90,12 +90,12 @@
                     type: "dimension",
                 },
                 {
-                    headerName: "Xtd",
+                    headerName: "",
                     field: "id",
                     cellRenderer: "btnCellRenderer",
                     cellRendererParams: {
                         changeTask: function (id) {
-                            location.href = '/edit/' + id
+                            location.href = '/#/edit/' + id
                         },
                         del: function (id) {
                             let x = (JSON.parse(localStorage.allUser))
@@ -103,7 +103,7 @@
                                 if (x[i].id === id) {
                                     x.splice(i, 1)
                                     localStorage.allUser = JSON.stringify(x)
-                                    location.href = '/'
+                                    location.href = '/#/'
                                 }
                             }
                         },
