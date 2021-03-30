@@ -11,6 +11,7 @@
 <script>
     import {AgGridVue} from "ag-grid-vue";
     import BtnCellRenderer from "../components/BtnAgGrid";
+    import router from "../router.js";
 
     export default {
         name: 'AllUSer',
@@ -95,7 +96,7 @@
                     cellRenderer: "btnCellRenderer",
                     cellRendererParams: {
                         changeTask: function (id) {
-                            this.$router.push({ name: 'edit', params: { id: id } })
+                            router.push({ name: 'edit', params: { id: id } })
 
                             //location.href = location.href + 'edit/' + id
                         },
