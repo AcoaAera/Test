@@ -22,7 +22,6 @@
                 this.params.changeTask(this.params.value);
             },
             del() {
-                this.changeRowDatas();
                 this.params.del(this.params.value);
             }
         },

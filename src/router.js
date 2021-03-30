@@ -6,11 +6,11 @@ import EditUser from './pages/EditUser.vue'
 export default new VueRouter({
     routes: [
         {
-            path: "",
+            path: "/",
             component: AllUser
         },
         {
-            path: "/#/add",
+            path: "/add",
             component: AddUser
         },
         {
@@ -18,6 +18,5 @@ export default new VueRouter({
             component: EditUser
         },
     ],
-    //mode: 'history',
-    //base: "/test/"
+    mode: 'history',
 })
