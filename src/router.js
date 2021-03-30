@@ -18,6 +18,6 @@ export default new VueRouter({
             component: EditUser
         },
     ],
-    mode: 'history',
-    base: "/app/"
+    //mode: 'history',
+    //base: "/app/"
 })
