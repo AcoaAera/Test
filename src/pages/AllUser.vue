@@ -9,9 +9,10 @@
 </template>
 
 <script>
-    import {AgGridVue} from "ag-grid-vue";
-    import BtnCellRenderer from "../components/BtnAgGrid";
-    import router from "../router.js";
+    import {AgGridVue} from "ag-grid-vue"
+    import BtnCellRenderer from "../components/BtnAgGrid"
+    import router from "../router.js"
+    import { AG_GRID_LOCALE_RU } from "../locale_ru.js"
 
     export default {
         name: 'AllUSer',
@@ -49,10 +50,10 @@
                 rowGroupPanelShow: "always",
                 rowData: null,
                 suppressAggFuncInHeader: true,
-                //localeText: AG_GRID_LOCALE_RU,
+                localeText: AG_GRID_LOCALE_RU,
                 colResizeDefault: "shift",
                 enableRangeSelection: true,
-            };
+            }
             this.columnDefs = [
                 {
                     field: 'surname', headerName: 'Фамилия', filter: true,
@@ -112,10 +113,10 @@
                         },
                     },
                 },
-            ];
+            ]
             this.frameworkComponents = {
                 btnCellRenderer: BtnCellRenderer,
-            };
+            }
         }
     }
 </script>

@@ -14,15 +14,15 @@
 </template>
 
 <script>
-    import Vue from "vue";
+    import Vue from "vue"
 
     export default Vue.extend({
         methods: {
             changeTask() {
-                this.params.changeTask(this.params.value);
+                this.params.changeTask(this.params.value)
             },
             del() {
-                this.params.del(this.params.value);
+                this.params.del(this.params.value)
             }
         },
     });

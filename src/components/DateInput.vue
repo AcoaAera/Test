@@ -23,7 +23,7 @@
             }
         },
         mounted(){
-            this.dates = this.valEdit === undefined ? null : this.valEdit;
+            this.dates = this.valEdit === undefined ? null : this.valEdit
         }
     }
 </script>

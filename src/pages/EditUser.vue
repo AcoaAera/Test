@@ -17,6 +17,7 @@
         <CheckInput @getValCheck="card.rights = $event" :valEdit="userInfo.rights" nameField="Наличие прав"/>
 
         <button type="button" class="btn btn-success" @click="editUser">Сохранить</button>
+        <button type="button" class="btn btn-secondary" @click="back">Назад</button>
     </div>
 </template>
 
@@ -57,7 +58,7 @@
                     alert("Заполните все поля со звездочками")
                     return
                 }
-                let allUser = (localStorage.allUser === undefined) ? [] : JSON.parse(localStorage.allUser);
+                let allUser = (localStorage.allUser === undefined) ? [] : JSON.parse(localStorage.allUser)
                 for (let i = 0; i < allUser.length; i++) {
                     if (allUser[i].id == this.card.id) {
                         allUser[i] = this.card
@@ -65,6 +66,11 @@
                         this.$router.push({ name: 'all'})
                     }
                 }
+            },
+
+            back(){
+
+                this.$router.push({ name: 'all'})
             },
 
             checkAllFields() {

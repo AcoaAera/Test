@@ -15,6 +15,7 @@
         <CheckInput @getValCheck="card.rights = $event" idField="rights" nameField="Наличие прав" :check="card.rights"/>
 
         <button type="button" class="btn btn-success" @click="addUser">Добавить</button>
+        <button type="button" class="btn btn-secondary" @click="back">Назад</button>
     </div>
 </template>
 
@@ -57,12 +58,16 @@
                     alert("Заполните все поля со звездочками")
                     return
                 }
-                let allUser = (localStorage.allUser === undefined) ? [] : JSON.parse(localStorage.allUser);
-                this.card.id = allUser.length;
+                let allUser = (localStorage.allUser === undefined) ? [] : JSON.parse(localStorage.allUser)
+                this.card.id = Math.floor(Math.random() * Math.floor(100000))
                 allUser.push(this.card)
                 localStorage.allUser = JSON.stringify(allUser)
                 this.$router.push({ name: 'all'})
 
+            },
+            back(){
+
+                this.$router.push({ name: 'all'})
             },
             checkAllFields() {
                 // Фамилия

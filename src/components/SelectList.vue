@@ -29,7 +29,7 @@
             }
         },
         mounted(){
-            this.selected = this.valEdit === undefined ? null : this.valEdit;
+            this.selected = this.valEdit === undefined ? null : this.valEdit
         }
     }
 </script>

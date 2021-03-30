@@ -29,7 +29,7 @@
             }
         },
         mounted(){
-            this.gender = this.valEdit === undefined ? null : this.valEdit;
+            this.gender = this.valEdit === undefined ? null : this.valEdit
         }
     }
 </script>

@@ -24,7 +24,7 @@
             }
         },
         mounted(){
-            this.val = this.valEdit === undefined ? null : this.valEdit;
+            this.val = this.valEdit === undefined ? null : this.valEdit
         }
 
     }
